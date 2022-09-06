@@ -31,9 +31,8 @@ app.post("/person", (req, res) => {
   let { name, age, gender } = req.body
   const newAge = Number(age) + 5
   console.log(newAge);
+  console.log(age);
   res.status(200).send(newAge.toString());
-  res.status(200).send(name);
-  res.status(200).send(gender);
 });
 
 
