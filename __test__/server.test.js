@@ -12,11 +12,11 @@ describe('API server', () => {
     expect(res.text).toEqual('Hello World')
   });
   it('Check if new age is greater than old age', async () => {
-    const person = {
+    const fakePerson = {
       name: "omar",
       age: 23,
       gender: "male" };
-    const res = await request.post("/person").send({ person });
-    expect(res.text).toEqual(28);
+    const res = await request.post("/person").send({ ...fakePerson });
+    expect(res.text).toEqual("28");
   });
 })
